@@ -1,0 +1,12 @@
+[
+    {
+        "db_id": "neuvix",
+        "query": "SELECT count(*) FROM head WHERE age  >  56",
+        "question": "How many heads of the departments are older than 56 ?"
+    },
+    {
+        "db_id": "neuvix",
+        "query": "SELECT name ,  born_state ,  age FROM head ORDER BY age",
+        "question": "List the name, born state and age of the heads of departments ordered by age."
+    }
+]

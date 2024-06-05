@@ -1,0 +1,327 @@
+[
+    {
+        "question": "列出所有船舶的船舶代码",
+        "query": "SELECT chi_and_eng_ship_name, ship_code FROM tp_mis.change_ship_archives_basic_info;",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的国籍",
+        "query": "SELECT chi_ship_name,nationality  FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶呼号",
+        "query": "SELECT chi_ship_name,ship_call_number  FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶等级",
+        "query": "SELECT chi_ship_name,vessel_class FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶总箱重",
+        "query": "SELECT chi_ship_name,box_total FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶总吨位",
+        "query": "SELECT chi_ship_name,total_tonnage_of_ships FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶净吨位",
+        "query": "SELECT chi_ship_name,net_tonnage_of_ships FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶载重吨",
+        "query": "SELECT chi_ship_name,ships_deadweight_tonnage FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶长度",
+        "query": "SELECT chi_ship_name,ship_length FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船头位置",
+        "query": "SELECT chi_ship_name,bow_position FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的烟囱位置",
+        "query": "SELECT chi_ship_name,chimney_position FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶型深",
+        "query": "SELECT chi_ship_name,ship_type_depth FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶宽度",
+        "query": "SELECT chi_ship_name,ship_width FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶高度",
+        "query": "SELECT chi_ship_name,ship_height FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶速度",
+        "query": "SELECT chi_ship_name,ship_speed FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的建造日期",
+        "query": "SELECT chi_ship_name,date_of_construction FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船舶类型",
+        "query": "SELECT chi_ship_name,ship_type FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的班轮标识",
+        "query": "SELECT chi_ship_name,Liner_identification FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的集团代码",
+        "query": "SELECT chi_ship_name,group_code FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的MMSI代码",
+        "query": "SELECT chi_ship_name,mmsi_code FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的贝数量",
+        "query": "SELECT chi_ship_name,bei_number FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的舱口数",
+        "query": "SELECT chi_ship_name,number_of_hatches FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的船头贝数",
+        "query": "SELECT chi_ship_name,number_of_bow_shells FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的舱盖数",
+        "query": "SELECT chi_ship_name,number_of_hatch_covers FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的空载吃水吨位",
+        "query": "SELECT chi_ship_name,empty_draft_tonnage FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的重载吃水吨位",
+        "query": "SELECT chi_ship_name,Heavy_load_draft_tonnage FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的甲板起始层序号",
+        "query": "SELECT chi_ship_name,number_of_deck_starting_layer FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "显示船舶安盛18的所属码头",
+        "query": "SELECT chi_ship_name,belonging_to_the_dock FROM tp_mis.change_ship_archives_basic_info where chi_ship_name = \"安盛18\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "列举所有当前在泊船的中文名称",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"在泊\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "列举所有当前港口内停靠的船舶",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"在泊\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "当前港口内停了哪些船",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"在泊\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询所有预进船信息",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"预进\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询所有计划进港的船名",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"预进\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询所有等待进港船的船名",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"预进\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "有哪些船等待进入港口",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"预进\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "长贺所在的公司",
+        "query": "SELECT DISTINCT ship_owner FROM change_shipping_basic_work_data WHERE vssc_name =\"长贺\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "长贺所在的航线",
+        "query": "SELECT DISTINCT line_name FROM change_shipping_basic_work_data WHERE vssc_name =\"长贺\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询长贺最新在港状态",
+        "query": "SELECT vssc_name, ship_state FROM change_shipping_basic_work_data WHERE vssc_name =\"长贺\" ORDER BY update_date_time DESC LIMIT 1 ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "津港驳运快线是否有船在港作业 ",
+        "query": "SELECT COUNT(*) FROM change_shipping_basic_work_data WHERE line_name =\"津港驳运快线\" AND ship_state=\"在泊\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "津港驳运快线是否有船计划进港",
+        "query": "SELECT vssc_name, ship_state, update_date_time FROM change_shipping_basic_work_data WHERE line_name =\"津港驳运快线\" ORDER BY update_date_time DESC LIMIT 1 ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "列举所有航线的在泊状态",
+        "query": "",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59计划靠泊时间",
+        "query": "SELECT plan_berthing_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1 ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59实际靠泊时间",
+        "query": "SELECT act_berthind_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1 ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59实际靠泊时间与计划靠泊时间偏差",
+        "query": "",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59计划开工时间",
+        "query": "SELECT plan_start_work_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1  ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59实际开工时间",
+        "query": "SELECT act_start_work_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1  ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59计划完工时间",
+        "query": "SELECT plan_finish_work_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1  ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59实际完工时间",
+        "query": "SELECT act_finish_work_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1  ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59进口开始时间",
+        "query": "SELECT vssc_name, import_start_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1  ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询华晟59进口完工时间",
+        "query": "SELECT vssc_name, import_finish_date_time FROM change_shipping_basic_work_data WHERE vssc_name = \"华晟59\" ORDER BY update_date_time DESC LIMIT 1  ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "内贸航向有哪些",
+        "query": "SELECT route_desc FROM tp_mis.change_route_basic_info where trad_attr = \"内贸\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "航线类型有哪些",
+        "query": "SELECT DISTINCT route_type FROM tp_mis.change_route_basic_info ;",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "O型航向有哪些",
+        "query": "SELECT route_code, route_type,route_desc,trad_attr FROM tp_mis.change_route_basic_info where route_type = \"O型\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "钟摆型航向有哪些",
+        "query": "SELECT route_code, route_type,route_desc,trad_attr FROM tp_mis.change_route_basic_info where route_type = \"钟摆型\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "8字型航向有哪些",
+        "query": "SELECT route_code, route_type,route_desc,trad_attr FROM tp_mis.change_route_basic_info where route_type = \"8字型\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "2M地中海三线的港口顺序是什么",
+        "query": "SELECT port_sequence FROM tp_mis.change_route_basic_info where  route_desc  = \"2M地中海三线\" ;\n",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询司机田旺的工号",
+        "query": "SELECT driver_no FROM tp_mis.change_driver_basic_info where driver_name =\"田旺\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "查询司机曹哲文的工号",
+        "query": "SELECT driver_no FROM tp_mis.change_driver_basic_info where driver_name =\"曹哲文\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "司机曹哲文的工号是多少",
+        "query": "SELECT driver_no FROM tp_mis.change_driver_basic_info where driver_name =\"曹哲文\";",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "司机甲组有哪些人",
+        "query": "SELECT driver_name FROM tp_mis.change_driver_basic_info where class_group = \"甲组\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "司机乙组有哪些人",
+        "query": "SELECT driver_name FROM tp_mis.change_driver_basic_info where class_group = \"乙组\"",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "司机共有几个班组",
+        "query": "SELECT COUNT(DISTINCT class_group) AS group_count FROM tp_mis.change_driver_basic_info",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "当前司机分哪几个班组",
+        "query": "SELECT DISTINCT class_group FROM tp_mis.change_driver_basic_info ;",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "列出所有驾驶员信息",
+        "query": "SELECT driver_name,driver_no,class_group FROM tp_mis.change_driver_basic_info ; ",
+        "db_id": "neuvix"
+    },
+    {
+        "question": "列出甲组司机信息",
+        "query": "SELECT driver_name,driver_no,class_group FROM tp_mis.change_driver_basic_info where class_group = \"甲组\"  ; ",
+        "db_id": "neuvix"
+    }
+]
