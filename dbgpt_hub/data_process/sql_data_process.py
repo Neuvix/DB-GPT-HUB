@@ -50,11 +50,10 @@ class ProcessSqlData:
                 datas.extend(jsonlines.open(data_file))
 
         elif table_file.endswith(".json"):
-            tables = json.load(open(table_file, encoding="utf-8"))  # 加载tables.json文件
+            tables = json.load(open(table_file, encoding="utf-8"))  # 加载tables.json文件,多个表，多个字典对象：[{'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}, {'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}, {'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}, {'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}]
             datas = []
             for data_file in data_file_list:
-                datas.extend(json.load(open(data_file,encoding="utf-8")))
-                # [{'db_id': 'department_management', 'query': 'SELECT count(*) FROM head WHERE age  >  56', 'question': 'How many heads of the departments are older than 56 ?'}, {'db_id': 'department_management', 'query': 'SELECT name ,  born_state ,  age FROM head ORDER BY age', 'question': 'List the name, born state and age of the heads of departments ordered by age.'}]
+                datas.extend(json.load(open(data_file,encoding="utf-8")))  #datas就是\data\neuvix\query_sql_train.json里的内容
         else:
             print("Unsupported file types")
             raise
@@ -62,9 +61,10 @@ class ProcessSqlData:
         # 先将db_id 的table和coloumns处理好
         # 这里是tables.json文件，转成prompt文件
         db_dict = {}
-        for item in tables:
+        for item in tables:  # 一个item是一个表
             tables = item["table_names_original"]
             coloumns = item["column_names_original"][1:]
+            column_comments = item["column_comments"][1:]
             primary_key = item["primary_keys"]  # 数字[2]
             foreign_keys = item["foreign_keys"]
             source = (
@@ -75,6 +75,9 @@ class ProcessSqlData:
                 source += (
                     "Table " + name + " has columns such as " + ", ".join(data) + ". "
                 )  # 'puzzleprogram_DB contains tables such as wx_user. Table wx_user has columns such as openid, session_key, nickName, unionid. '
+
+                comments = [comment[1] for comment in column_comments if comment[0] == i]
+                source += "The comments of columns are " + ", ".join(comments) + ". "
 
                 # get primary key info
                 for j in range(len(primary_key)):
@@ -117,7 +120,7 @@ class ProcessSqlData:
                     + ".\n"
                 )
 
-            db_dict[item["db_id"]] = source
+            db_dict[item["table_names"][0]] = source  # todo: 改这里为table_names
             # db_dict = {'puzzleprogram_DB': 'puzzleprogram_DB contains tables such as wx_user. 
             # Table wx_user has columns such as openid, session_key, nickName, unionid. session_key is the primary key.\n'}
 
@@ -127,7 +130,7 @@ class ProcessSqlData:
             base_instruction = INSTRUCTION_ONE_SHOT_PROMPT
 
         for data in tqdm(datas):
-            if data[db_id_name] in db_dict.keys():
+            if data["table"] in db_dict.keys():
                 if is_multiple_turn:  # 多轮
                     history = []
                     for interaction in data["interaction"]:
@@ -175,10 +178,11 @@ class ProcessSqlData:
                         }
                         res.append(input)
                     else:
-                        input = {
+                        input = {   # 构造json！！
                             "db_id": data[db_id_name],
+                            "table": data["table"],
                             "instruction": base_instruction.format(
-                                db_dict[data[db_id_name]]
+                                db_dict[data["table"]]  # 这里要改table
                             ),
                             "input": INPUT_PROMPT.format(data["question"]),
                             "output": data[output_name],
@@ -192,12 +196,12 @@ class ProcessSqlData:
         dev_data = []
         for data_info in SQL_DATA_INFO:
             train_data_file_list = [  # 找到训练数据
-                os.path.join(DATA_PATH, data_info["data_source"], file)  # data_info['data_source']='spider'
+                os.path.join(DATA_PATH, data_info["data_source"], file)  # data_info['data_source']='neuvix'
                 for file in data_info["train_file"]
             ]
             # train_data_file_list：
-            # ['c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\spider\\train_zny.json', 
-            # 'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\spider\\train_others.json']
+            # ['c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\neuvix\\query_sql_train.json', 
+            # 'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\neuvix\\train_others.json']
             train_data.extend(
                 self.decode_json_file(
                     data_file_list=train_data_file_list,
@@ -253,8 +257,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # 这两个文件，是最后进入微调模型的文件
-    all_in_one_train_file = os.path.join(DATA_PATH, "finetuing_train2.json")  # 'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\example_text2sql_train.json'
-    all_in_one_dev_file = os.path.join(DATA_PATH, "finetuing_dev2.json")
+    all_in_one_train_file = os.path.join(DATA_PATH, "finetuing_train.json")  # 'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\example_text2sql_train.json'
+    all_in_one_dev_file = os.path.join(DATA_PATH, "finetuing_dev.json")
     precess = ProcessSqlData(
         train_file=all_in_one_train_file,
         dev_file=all_in_one_dev_file,

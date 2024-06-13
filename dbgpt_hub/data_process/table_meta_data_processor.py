@@ -87,7 +87,7 @@ class TableMetaDataProcessor(object):
         }
 
     def generate_table_metadata(self) -> Optional[List]:
-        table_configs = self.__config_data["table-configs"]  # db_config.yaml 中的配置table-configs
+        table_configs = self.__config_data["table-configs"]  # db_config.yaml 中的配置table-configs，字典：{'change_ship_archives_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_driver_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_route_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_shipping_basic_work_data': {'tables': [...], 'foreign_keys': None}}
 
         # 结果列表
         result = []

@@ -10,7 +10,7 @@ class ExcelProcessor:
     def read_excel_to_json(self, file_path, output_path):
         json_data = []
         data = pd.read_excel(file_path)
-        data.fillna("", inplace=True) # 对空格数据做填充
+        data.dropna(inplace=True)
         for row in data.values.tolist():
             db_id = {"db_id":"neuvix"}
             row_dict = dict(zip(data.columns, row))

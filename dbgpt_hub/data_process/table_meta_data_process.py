@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # db_config.yaml文件在工具包dataset_util文件夹下
     config_data_path = os.path.join(parent_path, "dataset_util")
 
-    config_data = get_config(config_data_path)
+    config_data = get_config(config_data_path) #config_data['table-configs']是字典：{'change_ship_archives_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_driver_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_route_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_shipping_basic_work_data': {'tables': [...], 'foreign_keys': None}}
 
     # # 生成mysql 工具对象
     # connect = None
