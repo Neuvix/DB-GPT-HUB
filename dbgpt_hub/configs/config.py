@@ -48,7 +48,7 @@ EXT2TYPE = {"csv": "csv", "json": "json", "jsonl": "json", "txt": "text"}
 SQL_DATA_INFO = [
     {
         "data_source": "tp_mis",  # 这是一个库
-        "train_file": ["train.json"], # 可以加多个训练数据集, "train_others.json"
+        "train_file": ["question_sql.json"], # 用于生成prompt训练集的初始数据集，可以加多个训练数据集, "train_others.json"
         "dev_file": ["dev.json"],
         "train_tables_file": "tables.json",
         "dev_tables_file": "tables.json",

@@ -1,4 +1,3 @@
-'''无用类'''
 import os
 import json
 import jsonlines
@@ -33,7 +32,7 @@ class ProcessSqlData:
         self,
         data_file_list,
         table_file,
-        db_folder_path,  # 'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\spider\\database'好像没有用
+        db_folder_path, # 目前无用
         db_id_name,
         output_name,
         is_multiple_turn=False,
@@ -51,16 +50,16 @@ class ProcessSqlData:
                 datas.extend(jsonlines.open(data_file))
 
         elif table_file.endswith(".json"):
-            tables = json.load(open(table_file, encoding="utf-8"))  # 加载tables.json文件,多个表，多个字典对象：[{'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}, {'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}, {'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}, {'column_comments': [...], 'column_names_original': [...], 'column_types': [...], 'db_id': 'neuvix', 'foreign_keys': [...], 'primary_keys': [...], 'table_names': [...], 'table_names_original': [...]}]
+            tables = json.load(open(table_file, encoding="utf-8"))  # 加载tables.json文件,多个表
             datas = []
             for data_file in data_file_list:
-                datas.extend(json.load(open(data_file,encoding="utf-8")))  #datas就是\data\neuvix\query_sql_train.json里的内容
+                datas.extend(json.load(open(data_file,encoding="utf-8")))  #datas就是\data\tp_mis\query_sql.json里的内容
         else:
             print("Unsupported file types")
             raise
 
         # 先将db_id 的table和coloumns处理好
-        # 这里是tables.json文件，转成prompt文件
+        # 这里将tables.json文件，转成prompt文件
         db_dict = {}
         for item in tables:  # 一个item是一个表
             tables = item["table_names_original"]
@@ -75,8 +74,8 @@ class ProcessSqlData:
                 data = [coloumn[1] for coloumn in coloumns if coloumn[0] == i]
                 source += (
                     "Table " + name + " has columns such as " + ", ".join(data) + ". "
-                )  # 'puzzleprogram_DB contains tables such as wx_user. Table wx_user has columns such as openid, session_key, nickName, unionid. '
-
+                ) 
+                # 添加注释
                 comments = [comment[1] for comment in column_comments if comment[0] == i]
                 source += "The comments of columns are " + ", ".join(comments) + ". "
 
@@ -88,8 +87,7 @@ class ProcessSqlData:
                                 coloumns[primary_key[j] - 1][1]
                                 + " is the primary key."
                                 + "\n"
-                            ) #'puzzleprogram_DB contains tables such as wx_user. Table wx_user has columns such as openid, session_key, nickName, unionid. session_key is the primary key.\n',有误
-                            # 'puzzleprogram_DB contains tables such as wx_user. Table wx_user has columns such as openid, session_key, nickName, unionid. openid is the primary key.\n'改后
+                            ) 
                     # combination primary key
                     elif type(primary_key[j]) == list:
                         combine_p = "The combination of ("
@@ -121,9 +119,7 @@ class ProcessSqlData:
                     + ".\n"
                 )
 
-            db_dict[item["table_names"][0]] = source  # todo: 改这里为table_names
-            # db_dict = {'puzzleprogram_DB': 'puzzleprogram_DB contains tables such as wx_user. 
-            # Table wx_user has columns such as openid, session_key, nickName, unionid. session_key is the primary key.\n'}
+            db_dict[item["table_names"][0]] = source  # 这里设置prompt的table_names，table_names来自tables.json配置
 
         res = []
         base_instruction = INSTRUCTION_PROMPT
@@ -132,7 +128,7 @@ class ProcessSqlData:
 
         for data in tqdm(datas):
             if data["table"] in db_dict.keys():
-                if is_multiple_turn:  # 多轮
+                if is_multiple_turn:  # 多轮，这个分支不考虑
                     history = []
                     for interaction in data["interaction"]:
                         input = {
@@ -152,7 +148,7 @@ class ProcessSqlData:
                             )
                         )
                 else:  # 单轮
-                    if self.code_representation:
+                    if self.code_representation: # 这个分支不考虑
                         db_path = os.path.join(db_folder_path, data[db_id_name])
                         sql_file_path = next(
                             (
@@ -179,7 +175,7 @@ class ProcessSqlData:
                         }
                         res.append(input)
                     else:
-                        input = {   # 构造json！！
+                        input = {   # 构造prompt_train.json!!!
                             "db_id": data[db_id_name],
                             "table": data["table"],
                             "instruction": base_instruction.format(
@@ -258,8 +254,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # 这两个文件，是最后进入微调模型的文件
-    all_in_one_train_file = os.path.join(DATA_PATH, "finetuing_train.json")  # 'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\example_text2sql_train.json'
-    all_in_one_dev_file = os.path.join(DATA_PATH, "finetuing_dev.json")
+    all_in_one_train_file = os.path.join(DATA_PATH, "prompt_train.json")  # 'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\example_text2sql_train.json'
+    all_in_one_dev_file = os.path.join(DATA_PATH, "prompt_dev.json")
     precess = ProcessSqlData(
         train_file=all_in_one_train_file,
         dev_file=all_in_one_dev_file,

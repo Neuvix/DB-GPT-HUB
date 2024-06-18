@@ -1,14 +1,14 @@
 [
     {
-        "db_id": "puzzleprogram_DB",
-        "table": "head",
-        "query": "SELECT count(*) FROM head WHERE age  >  56",
-        "question": "How many heads of the departments are older than 56 ?"
+        "question": "查询所有计划进港的船名",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"预进\"",
+        "table": "change_shipping_basic_work_data",
+        "db_id": "tp_mis"
     },
     {
-        "db_id": "puzzleprogram_DB",
-        "table": "head",
-        "query": "SELECT name ,  born_state ,  age FROM head ORDER BY age",
-        "question": "List the name, born state and age of the heads of departments ordered by age."
+        "question": "查询所有等待进港船的船名",
+        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"预进\"",
+        "table": "change_shipping_basic_work_data",
+        "db_id": "tp_mis"
     }
 ]
