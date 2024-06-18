@@ -47,8 +47,8 @@ EXT2TYPE = {"csv": "csv", "json": "json", "jsonl": "json", "txt": "text"}
 # TODO: BIRD \ WiKiSQL \ ...
 SQL_DATA_INFO = [
     {
-        "data_source": "neuvix",  # 这是一个库
-        "train_file": ["query_sql_train.json", "train_others.json"],
+        "data_source": "tp_mis",  # 这是一个库
+        "train_file": ["train.json"], # 可以加多个训练数据集, "train_others.json"
         "dev_file": ["dev.json"],
         "train_tables_file": "tables.json",
         "dev_tables_file": "tables.json",

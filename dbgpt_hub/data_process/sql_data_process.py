@@ -1,3 +1,4 @@
+'''无用类'''
 import os
 import json
 import jsonlines
