@@ -28,13 +28,20 @@ def get_config(path):
 构造tables.json
 '''
 if __name__ == "__main__":
-    # current_path = os.path.split(os.path.realpath(__file__))[0]
     #获取父文件夹路径
     parent_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     # db_config.yaml文件在工具包dataset_util文件夹下
     config_data_path = os.path.join(parent_path, "dataset_util")
+    config_data = get_config(config_data_path)
 
-    config_data = get_config(config_data_path) #config_data['table-configs']是字典：{'change_ship_archives_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_driver_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_route_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_shipping_basic_work_data': {'tables': [...], 'foreign_keys': None}}
+    # 下面链接数据库可以不关注，只关注db_config.yaml文件即可
+    processor = TableMetaDataProcessor(config_data)
+    meta = processor.generate_table_metadata()
+
+    # tables.json要写到data目录下当前数据库所对应的文件夹
+    output_path = os.path.join(DATA_PATH, config_data["database"]["db"])
+    with open(os.path.join(output_path, "tables.json"), "w",encoding="utf-8") as file:
+        json.dump(meta, file, ensure_ascii=False, indent=1)  # indent=1表示缩进1个空格
 
     # # 生成mysql 工具对象
     # connect = None
@@ -50,12 +57,3 @@ if __name__ == "__main__":
     #     )
     # else:
     #     raise ()
-
-    # 上面链接数据库可以不关注，只关注db_config.yaml文件即可
-    processor = TableMetaDataProcessor(config_data)
-    meta = processor.generate_table_metadata()
-
-    # tables.json要写到data目录下当前数据库所对应的文件夹
-    output_path = os.path.join(DATA_PATH, config_data["database"]["db"])
-    with open(os.path.join(output_path, "tables.json"), "w",encoding="utf-8") as file:
-        json.dump(meta, file, ensure_ascii=False, indent=1)  # indent=1表示缩进1个空格

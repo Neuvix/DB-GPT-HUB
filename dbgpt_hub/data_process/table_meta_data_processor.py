@@ -87,15 +87,16 @@ class TableMetaDataProcessor(object):
         }
 
     def generate_table_metadata(self) -> Optional[List]:
-        table_configs = self.__config_data["table-configs"]  # db_config.yaml 中的配置table-configs，字典：{'change_ship_archives_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_driver_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_route_basic_info': {'tables': [...], 'foreign_keys': None}, 'change_shipping_basic_work_data': {'tables': [...], 'foreign_keys': None}}
+        table_configs = self.__config_data["table-configs"]  # db_config.yaml 中的配置table-configs
+        schema = self.__config_data["database"]["db_schema"]
 
         # 结果列表
         result = []
-        db_id = self.__config_data["database"]["db"]  # 'puzzleprogram_DB'
+        db_id = self.__config_data["database"]["db"]  # 'tp_mis'
         for key, value in table_configs.items():
-            tables = value["tables"]  # ['change_ship_archives_basic_info', 'change_driver_basic_info', 'change_route_basic_info', 'change_shipping_basic_work_data']
+            tables = value["tables"]
             foreign_keys = value["foreign_keys"] # None，目前业务不涉及外键
-            schema_path = os.path.join(DATA_PATH,db_id,'schema') #'c:\\Users\\HP\\Desktop\\Neuvix\\NL2SQL\\DB-GPT-Hub\\dbgpt_hub/data\\neuvix\\schema'
+            schema_path = os.path.join(DATA_PATH,db_id,schema) #'dbgpt_hub/data\\tp_mis\\schema'
 
             # 表元数据
             table_meta_data = self._generate_table_meta_data(
