@@ -1,6 +1,6 @@
 # Neuvix-NL2SQL项目
 
-本项目基于DB-GBT-HUB框架，将重构数据预处理、模型微调两部分功能。
+本项目基于DB-GBT-HuB框架，将重构数据预处理、模型微调两部分功能。
 
 #### 目前已重构文件夹：
 
@@ -16,11 +16,39 @@ llama3——支持中文
 
 
 
+## 0 环境准备
+
+```
+git clone https://github.com/Neuvix/DB-GPT-HUB.git
+cd DB-GPT-HUB
+conda create -n dbgpt_hub python=3.10 
+conda activate dbgpt_hub
+pip install poetry
+poetry install
+```
+
+
+
 ## 1 数据预处理
 
 整体流程图：
 
-![1717654715461](1717654715461.png)
+![1718711592012](1718711592012.png)
+
+只需要配置好以下文件，然后执行:
+
+``poetry run sh dbgpt_hub/scripts/gen_train_eval_data.sh``即可。
+
+（此步骤前一定要先执行`poetry install`)
+
+| 路径                                  | 结构                                |
+| ------------------------------------- | ----------------------------------- |
+| dbgpt_hub\data\tp_mis\schema          | 目录，其下存放表的schema描述excel表 |
+| dbgpt_hub\data\tp_mis\query_sql.xlsx  | excel文件，存放sql、查询文本对      |
+| dbgpt_hub\dataset_util\db_config.yaml | 按下方1.1节说明进行配置             |
+| dbgpt_hub\configs\config.py           | 按下方1.3节说明配置SQL_DATA_INFO    |
+
+
 
 #### 1.1 将schema转成tables.json
 
@@ -32,7 +60,19 @@ tables.json是存储表元数据的文件，用于构造prompt
 
 - tables.json生成方法：
 
-  1）配置好dbgpt_hub\dataset_util\db_config.yaml文件的数据库、表信息。详情看文件中注释。
+  1）配置好dbgpt_hub\dataset_util\**db_config.yaml文件**的database、table-configs。详情看文件中注释。
+
+  ```yaml
+  database:
+    db: tp_mis  # 数据库名
+    db_schema: schema  # schema所在目录名
+    question_sql_pairs: ["question_sql.xlsx", "question_sql.json"] # 输入、输出的查询、sql文本对文件名称
+  
+  table-configs:
+    change_ship_archives_basic_info: # 写主表，没主表则随机
+      tables: ["change_ship_archives_basic_info"]  # 所有表放在一个列表里
+      foreign_keys:
+  ```
 
   2）将schema的excel文件放入上述schema路径。
 
@@ -72,14 +112,7 @@ tables.json是存储表元数据的文件，用于构造prompt
 
 - 准备好预先收集的NL和SQL数据，放到以下路径：dbgpt_hub\data\tp_mis\query_sql.xlsx
 
-- 配置好db_config.yaml的database：
-
-  ```yaml
-  database:
-    db: tp_mis  # 数据库名
-    db_schema: schema  # schema所在目录名
-    question_sql_pairs: ["question_sql.xlsx", "question_sql.json"] # 输入、输出的查询、sql文本对文件名称
-  ```
+- 配置好db_config.yaml的database
 
 - 运行dbgpt_hub\data_process\question_sql_data_process.py脚本
 
