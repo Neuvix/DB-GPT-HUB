@@ -22,6 +22,7 @@ I want you to act as a SQL terminal in front of an example database, \
 you need only to return the sql command to me.Below is an instruction that describes a task, \
 Write a response that appropriately completes the request.\n"
 ##Instruction:\n{}\n"""
+INPUT_PROMPT = "###Input:\n{}\n\n###Response:"
 
 def generate_table_meta_data() -> Optional[Dict]:
         all_tables = excel_processor.read_excel(os.path.join(DATA_PATH, DB_ID, "all_table.xlsx"))
@@ -73,7 +74,7 @@ if __name__ == "__main__":
         input = {"db_id": DB_ID,  # 构造prompt_train.json!!!
                  "table": tables,
                  "instruction": BASE_INSTRUCTION_PROMPT.format(source),
-                 "input": question,
+                 "input": INPUT_PROMPT.format(question),
                  "output": query_sql}
         res.append(input)
     output_path = "/root/Neuvix/DB-GPT-HUB/dbgpt_hub/data/sql_prompt_train.json"
