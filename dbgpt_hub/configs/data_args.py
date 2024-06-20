@@ -266,7 +266,7 @@ class Template:
         r"""
         Returns multiple pairs of token ids representing prompts and responses respectively.
         """
-        system, history = self._format(query, resp, history, system)
+        system, history = self._format(query, resp, history, system) # 对语句做embedding
         encoded_pairs = self._encode(tokenizer, system, history)
         return encoded_pairs
 
@@ -282,7 +282,7 @@ class Template:
         """
         system = system or self.system  # use system if provided
         history = history if (history and self.use_history) else []
-        history = history + [(query, resp)]
+        history = history + [(query, resp)]  # 这里带上历史部分
         return system, history
 
     def _get_special_ids(

@@ -44,11 +44,11 @@ def run_sft(
     generating_args: "GeneratingArguments",
     callbacks: Optional[List["TrainerCallback"]] = None,
 ):
-    dataset = get_dataset(model_args, data_args)
-    model, tokenizer = load_model_and_tokenizer(
+    dataset = get_dataset(model_args, data_args) # 加载数据集的"格式"，来自dataset_info.json文件，example_text2sql_train对象中指定的文件
+    model, tokenizer = load_model_and_tokenizer( # 加载模型
         model_args, finetuning_args, training_args.do_train
     )
-    dataset = preprocess_dataset(dataset, tokenizer, data_args, training_args, "sft")
+    dataset = preprocess_dataset(dataset, tokenizer, data_args, training_args, "sft") # 对dataset数据做tokenizer等预处理
     data_collator = DataCollatorForSeq2Seq(
         tokenizer=tokenizer,
         label_pad_token_id=IGNORE_INDEX
@@ -56,6 +56,7 @@ def run_sft(
         else tokenizer.pad_token_id,
     )
 
+    # 下面是加载各类训练参数
     # Override the decoding parameters of Seq2SeqTrainer
     training_args_dict = training_args.to_dict()
     training_args_dict.update(
@@ -90,7 +91,7 @@ def run_sft(
     gen_kwargs["pad_token_id"] = tokenizer.pad_token_id
     gen_kwargs["logits_processor"] = get_logits_processor()
 
-    # Training
+    # Training 开始训练
     if training_args.do_train:
         train_result = trainer.train(
             resume_from_checkpoint=training_args.resume_from_checkpoint

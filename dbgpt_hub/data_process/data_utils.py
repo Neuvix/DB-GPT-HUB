@@ -165,7 +165,7 @@ templates: Dict[str, Template] = {}
 def get_template_and_fix_tokenizer(
     name: str, tokenizer: "PreTrainedTokenizer"
 ) -> Template:
-    template = templates.get(name, None)
+    template = templates.get(name, None) # 获得prompt模板
     assert template is not None, "Template {} does not exist.".format(name)
 
     additional_special_tokens = template.stop_words
@@ -613,7 +613,7 @@ def preprocess_dataset(
     training_args: "Seq2SeqTrainingArguments",
     stage: Literal["pt", "sft", "rm", "ppo"],
 ) -> Union["Dataset", "IterableDataset"]:
-    column_names = list(next(iter(dataset)).keys())
+    column_names = list(next(iter(dataset)).keys())  # ['query', 'prompt', 'db_id', 'history', 'response']
     template = get_template_and_fix_tokenizer(data_args.template, tokenizer)
 
     def construct_example(examples: Dict[str, List[Any]]) -> Generator[Any, None, None]:
@@ -652,6 +652,7 @@ def preprocess_dataset(
         }
         return result
 
+    # 对数据做编码，最后返回{input_ids、attention_mask、labels}
     def preprocess_supervised_dataset(examples: Dict[str, List[Any]]) -> Dict[str, Any]:
         # build inputs with format `<bos> X Y <eos>` and labels with format `<ignore> ... <ignore> Y <eos>`
         # for multiturn examples, we only mask the prompt part in each prompt-response pair.
@@ -661,10 +662,10 @@ def preprocess_dataset(
         for query, response, history, system in construct_example(examples):
             input_ids, labels = [], []
 
-            for source_ids, target_ids in template.encode_multiturn(
+            for source_ids, target_ids in template.encode_multiturn( # encode_multiturn:hisoty+current imput编码!!!
                 tokenizer, query, response, history, system
             ):
-                if len(source_ids) > data_args.max_source_length:
+                if len(source_ids) > data_args.max_source_length:  # 过长截断
                     source_ids = source_ids[: data_args.max_source_length]
                 if len(target_ids) > data_args.max_target_length:
                     target_ids = target_ids[: data_args.max_target_length]
@@ -788,8 +789,8 @@ def preprocess_dataset(
 
     if stage == "pt":
         pass
-    elif stage == "sft" and not training_args.predict_with_generate:
-        preprocess_function = preprocess_supervised_dataset
+    elif stage == "sft" and not training_args.predict_with_generate:  # 数据处理这里开始
+        preprocess_function = preprocess_supervised_dataset  # 使用这个方法
         print_function = print_supervised_dataset_example
     elif stage == "rm":
         print(111111111111111111)
@@ -848,13 +849,14 @@ def get_dataset(
     for dataset_attr in data_args.dataset_list:
         logger.info("Loading dataset {}...".format(dataset_attr))
 
+        # 判断训练的prompt数据集是什么形式
         if dataset_attr.load_from == "hf_hub":
             data_path = dataset_attr.dataset_name
             data_files = None
         elif dataset_attr.load_from == "script":
             data_path = os.path.join(data_args.dataset_dir, dataset_attr.dataset_name)
             data_files = None
-        elif dataset_attr.load_from == "file":
+        elif dataset_attr.load_from == "file": # 一般使用file
             data_path = None
             data_files: List[str] = []
 
@@ -903,6 +905,7 @@ def get_dataset(
             max_samples_temp = min(len(dataset), max_samples)
             dataset = dataset.select(range(max_samples_temp))
 
+        # 数据集features: ['input', 'instruction', 'db_id', 'history', 'output']，变成features: ['query', 'prompt', 'db_id', 'history', 'response']
         for column_name in ["prompt", "query", "response", "history"]:  # align datasets
             if (
                 getattr(dataset_attr, column_name)
