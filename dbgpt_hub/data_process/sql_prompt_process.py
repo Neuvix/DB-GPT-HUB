@@ -13,10 +13,10 @@ excel_processor = ExcelProcessor()
 DATA_PATH = "dbgpt_hub/data"
 DB_ID = "tp_mis"
 SCHEMA = "schema"
-SQL_PROMPT = '''I want you to act as a SQL terminal in front of an example database, \
-         you need only to return the sql command to me.Below is an instruction that describes a task, \
-         Write a response that appropriately completes the request.\n"
-        "##Instruction:\n{instruction}\n###Input:\n{input}\n\n###Response:'''
+# SQL_PROMPT = '''I want you to act as a SQL terminal in front of an example database, \
+#          you need only to return the sql command to me.Below is an instruction that describes a task, \
+#          Write a response that appropriately completes the request.\n"
+#         "##Instruction:\n{instruction}\n###Input:\n{input}\n\n###Response:'''
 BASE_INSTRUCTION_PROMPT = """\
 I want you to act as a SQL terminal in front of an example database, \
 you need only to return the sql command to me.Below is an instruction that describes a task, \
