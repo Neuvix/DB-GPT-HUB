@@ -1,12 +1,8 @@
 # -*- encoding: utf-8 -*-
-'''
-生成表的元数据文件tables.json
-'''
-import yaml
 import json
 import os
 import sys
-from typing import Any, Optional, Dict,List
+from typing import Optional, Dict
 
 ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(ROOT_PATH)
@@ -23,7 +19,7 @@ TABLE_PROMPT = '''I want you to act as a SQL terminal in front of an example dat
         "##Instruction:\n{instruction}\n###Input:\n{input}\n\n###Response:'''
 BASE_INSTRUCTION_PROMPT = """\
 I want you to act as a SQL terminal in front of an example database, \
-you need only to return the sql command to me.Below is an instruction that describes a task, \
+you need only to return the table name to me.Below is an instruction that describes a task, \
 Write a response that appropriately completes the request.\n"
 ##Instruction:\n{}\n"""
 
