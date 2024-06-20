@@ -1,0 +1,695 @@
+[
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "列出所有船舶的船舶代码",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的国籍",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶呼号",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶等级",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶总箱重",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶总吨位",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶净吨位",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶载重吨",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶长度",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船头位置",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的烟囱位置",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶型深",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶宽度",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶高度",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶速度",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的建造日期",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船舶类型",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的班轮标识",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的集团代码",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的MMSI代码",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的贝数量",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的舱口数",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的船头贝数",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的舱盖数",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的空载吃水吨位",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的重载吃水吨位",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的甲板起始层序号",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_ship_archives_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_ship_archives_basic_info. Table change_ship_archives_basic_info has columns such as id, ship_code, chi_and_eng_ship_name, nationality, ship_call_number, ship_imo_number, vessel_class, box_total, total_tonnage_of_ships, net_tonnage_of_ships, ships_deadweight_tonnage, ship_length, bow_position, chimney_position, ship_type_depth, ship_width, ship_height, ship_speed, date_of_construction, ship_type, Liner_identification, group_code, mmsi_code, bei_number, number_of_hatches, number_of_bow_shells, number_of_hatch_covers, empty_draft_tonnage, Heavy_load_draft_tonnage, number_of_deck_starting_layer, beihao_arrangement_order, slot_way, stowage_scheme, belonging_to_the_dock, create_date_time, del_flag, chi_ship_name, eng_ship_name. The comments of columns are 主键ID, 船舶代码, 中英文船名, 国籍, 船舶呼号, 船舶IMO号, 船舶等级？, 总箱量, 船舶总吨位, 船舶净吨位, 船舶载重吨, 船舶长度, 船头位置, 烟囱位置, 船舶型深, 船舶宽度, 船舶高度, 船舶速度, 建造日期, 船舶类型, 班轮标识, 集团代码, MMSI代码, 贝数量, 舱口数, 船头贝数, 舱盖数, 空载吃水吨位, 重载吃水吨位, 甲板起始层序号, 贝号排列顺序, slot_way?, stowage_scheme?, 所属码头, 记录创建时间, 删除标记。0-未删除；1-已删除, 中文船名, 英文船名. id is the primary key.\n\n",
+        "input": "显示船舶安盛18的所属码头",
+        "output": [
+            "change_ship_archives_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "列举所有当前在泊船的中文名称",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "列举所有当前港口内停靠的船舶",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "当前港口内停了哪些船",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询所有预进船信息",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询所有计划进港的船名",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询所有等待进港船的船名",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "有哪些船等待进入港口",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "长贺所在的公司",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "长贺所在的航线",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询长贺最新在港状态",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "津港驳运快线是否有船在港作业 ",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "津港驳运快线是否有船计划进港",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59计划靠泊时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59实际靠泊时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59计划开工时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59实际开工时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59计划完工时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59实际完工时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59进口开始时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_shipping_basic_work_data"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_shipping_basic_work_data. Table change_shipping_basic_work_data has columns such as id, vss_code, call_id, ship_owner, line_name, service_in, service_out, ship_length, ship_width, vssc_name, vssl_name, ship_state, berth_code, berth_direction, head_band, caudal_band, plan_berthing_date_time, act_berthind_date_time, plan_start_work_date_time, act_start_work_date_time, plan_finish_work_date_time, act_finish_work_date_time, import_start_date_time, import_finish_date_time, export_start_date_time, export_finish_date_time, plan_set_sail_date_time, act_set_sail_date_time, voyage_in, voyage_out, ship_attr, ship_attr_out, single_vessel, single_bridge, enter_ship_date, plan_work_box_quantity, act_work_box_quantity, work_quay_crane_nums, work_quay_crane_nos, plan_work_quay_crane_total_duration, act_work_quay_crane_total_duration, plan_on_the_berth_duration, act_on_the_berth_duration, plan_on_the_berth_eff, act_on_the_berth_eff, plan_single_vessel_eff, act_single_vessel_eff, plan_single_bridge_eff, act_single_bridge_eff, m_quay_crane_no, plan_m_eff, act_m_eff, plan_m_box_quantity, act_m_box_quantity, plan_m_duration, act_m_duration, import_box_quantity, export_box_quantity, import_overrun_box_quantity, import_danger_box_quantity, import_code_storage_box_quantity, export_overrun_box_quantity, export_danger_box_quantity, export_code_storage_box_quantity, hatch_cover_nums, create_date_time, update_date_time, berth_pos_x. The comments of columns are 主键, 船舶代码, 船舶ID, 船公司, 航线名, 进口航线, 出口航线, 船长, 船宽, 中文船名, 英文船名, 船舶状态, 泊位, 泊位靠泊方向, 头带, 尾带, 计划靠泊时间, 实际靠泊时间, 计划开工时间, 实际开工时间, 计划完工时间, 实际完工时间, 进口开始时间, 进口完工时间, 出口开始时间, 出口完工时间, 计划开船时间, 实际开船时间, 进口航次, 出口航次, 进口贸易属性, 出口贸易属性, 单船效率, 单桥效率, 计划进船时间, 计划作业箱量, 实际作业箱量, 作业岸桥数量, 作业岸桥号, 计划作业岸桥总时长, 实际作业岸桥总时长, 计划在泊时长, 实际在泊时长, 计划在泊效率, 实际在泊效率, 计划单船效率, 实际单船效率, 计划单桥效率, 实际单桥效率, M岸桥号, 计划M效率, 实际M效率, 计划M箱量, 实际M箱量, 计划M时长, 实际M时长, 进口箱量, 出口箱量, 进口超限箱量, 进口危险品箱量, 进口冷藏箱量, 出口超限箱量, 出口危险品箱量, 出口冷藏箱量, 舱盖板数, 记录创建时间, 记录修改时间, 泊位管理计划-头齐. id is the primary key.\n\n",
+        "input": "查询华晟59进口完工时间",
+        "output": [
+            "change_shipping_basic_work_data"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_route_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_route_basic_info. Table change_route_basic_info has columns such as id, route_code, route_type, route_desc, trad_attr, port_sequence, belonging_to_the_dock, operate, create_date_time, del_flag. The comments of columns are 主键ID, 航线代码, 航线类型, 航线描述, 贸易属性, 港口顺序, 归属码头, 操作, 记录创建时间, 删除标记。0-未删除；1-已删除. id is the primary key.\n\n",
+        "input": "内贸航向有哪些",
+        "output": [
+            "change_route_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_route_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_route_basic_info. Table change_route_basic_info has columns such as id, route_code, route_type, route_desc, trad_attr, port_sequence, belonging_to_the_dock, operate, create_date_time, del_flag. The comments of columns are 主键ID, 航线代码, 航线类型, 航线描述, 贸易属性, 港口顺序, 归属码头, 操作, 记录创建时间, 删除标记。0-未删除；1-已删除. id is the primary key.\n\n",
+        "input": "航线类型有哪些",
+        "output": [
+            "change_route_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_route_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_route_basic_info. Table change_route_basic_info has columns such as id, route_code, route_type, route_desc, trad_attr, port_sequence, belonging_to_the_dock, operate, create_date_time, del_flag. The comments of columns are 主键ID, 航线代码, 航线类型, 航线描述, 贸易属性, 港口顺序, 归属码头, 操作, 记录创建时间, 删除标记。0-未删除；1-已删除. id is the primary key.\n\n",
+        "input": "O型航向有哪些",
+        "output": [
+            "change_route_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_route_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_route_basic_info. Table change_route_basic_info has columns such as id, route_code, route_type, route_desc, trad_attr, port_sequence, belonging_to_the_dock, operate, create_date_time, del_flag. The comments of columns are 主键ID, 航线代码, 航线类型, 航线描述, 贸易属性, 港口顺序, 归属码头, 操作, 记录创建时间, 删除标记。0-未删除；1-已删除. id is the primary key.\n\n",
+        "input": "钟摆型航向有哪些",
+        "output": [
+            "change_route_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_route_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_route_basic_info. Table change_route_basic_info has columns such as id, route_code, route_type, route_desc, trad_attr, port_sequence, belonging_to_the_dock, operate, create_date_time, del_flag. The comments of columns are 主键ID, 航线代码, 航线类型, 航线描述, 贸易属性, 港口顺序, 归属码头, 操作, 记录创建时间, 删除标记。0-未删除；1-已删除. id is the primary key.\n\n",
+        "input": "8字型航向有哪些",
+        "output": [
+            "change_route_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_route_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_route_basic_info. Table change_route_basic_info has columns such as id, route_code, route_type, route_desc, trad_attr, port_sequence, belonging_to_the_dock, operate, create_date_time, del_flag. The comments of columns are 主键ID, 航线代码, 航线类型, 航线描述, 贸易属性, 港口顺序, 归属码头, 操作, 记录创建时间, 删除标记。0-未删除；1-已删除. id is the primary key.\n\n",
+        "input": "2M地中海三线的港口顺序是什么",
+        "output": [
+            "change_route_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "查询司机田旺的工号",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "查询司机曹哲文的工号",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "司机曹哲文的工号是多少",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "司机甲组有哪些人",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "司机乙组有哪些人",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "司机共有几个班组",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "当前司机分哪几个班组",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "列出所有驾驶员信息",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    },
+    {
+        "db_id": "tp_mis",
+        "table": [
+            "change_driver_basic_info"
+        ],
+        "instruction": "I want you to act as a SQL terminal in front of an example database, you need only to return the sql command to me.Below is an instruction that describes a task, Write a response that appropriately completes the request.\n\"\n##Instruction:\ntp_mis contains tables such as change_driver_basic_info. Table change_driver_basic_info has columns such as id, driver_no, driver_name, class_group. The comments of columns are id, 工号, 司机姓名, 班组. id is the primary key.\n\n",
+        "input": "列出甲组司机信息",
+        "output": [
+            "change_driver_basic_info"
+        ]
+    }
+]

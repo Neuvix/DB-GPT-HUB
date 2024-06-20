@@ -14,7 +14,7 @@ class ExcelProcessor:
         return [tuple(row) for row in data.values.tolist()]
     
     # 这个方法会读取excel文件，将excel文件中的一行变成一个json对象，然后将所有字典放到一个列表中
-    def read_excel_to_json(self, file_path, output_path, db_id):
+    def read_excel_to_json(self, file_path, db_id):
         json_data = []
         data = pd.read_excel(file_path)
         data.dropna(inplace=True)
@@ -24,8 +24,7 @@ class ExcelProcessor:
             row_dict = dict(zip(data.columns, row))
             row_dict.update(db)
             json_data.append(row_dict)
-        with open(output_path, 'w',encoding="utf-8") as f:
-            json.dump(json_data, f, indent=4,ensure_ascii=False)
+        return json_data
     
 
 # if __name__ == "__main__":
