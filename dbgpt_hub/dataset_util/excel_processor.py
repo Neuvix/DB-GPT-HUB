@@ -4,7 +4,6 @@ ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fi
 sys.path.append(ROOT_PATH)
 
 import pandas as pd
-import json
 
 # 这个类用于读取excel文件
 class ExcelProcessor:
