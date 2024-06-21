@@ -24,7 +24,7 @@ Write a response that appropriately completes the request.\n"
 ##Instruction:\n{}\n"""
 INPUT_PROMPT = "###Input:\n{}\n\n###Response:"
 
-def generate_table_meta_data() -> Optional[Dict]:
+def generate_sql_table_meta_data() -> Optional[Dict]:
         all_tables = excel_processor.read_excel(os.path.join(DATA_PATH, DB_ID, "all_table.xlsx"))
         tables = [str(item[1]) for item in all_tables]
         all_table_dict = {}
@@ -51,7 +51,7 @@ def generate_table_meta_data() -> Optional[Dict]:
 
 if __name__ == "__main__":
     # 获得table的schema元数据
-    all_table_dict = generate_table_meta_data()
+    all_table_dict = generate_sql_table_meta_data()
     # for item in all_table_dict:
     #      print(item)
     #      print(all_table_dict[item])

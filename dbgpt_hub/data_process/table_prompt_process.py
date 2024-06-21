@@ -45,7 +45,6 @@ if __name__ == "__main__":
         current_data = table_sql_json_data[i]
         current_tables = current_data['table'].replace(" ", "").split(',')
         question = current_data['question']
-        # query_sql = current_data['query']
         source = (DB_ID + " contains tables such as " + ", ".join(all_tables) + ". ")
         source += ("The descriptions of these tables are " + ", ".join(all_tables_description)+ "\n")
         input = {"db_id": DB_ID,  # 构造prompt_train.json!!!
