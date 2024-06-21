@@ -8,6 +8,7 @@ sys.path.append(ROOT_PATH)
 
 from dbgpt_hub.llm_base.chat_model import ChatModel
 from dbgpt_hub.dataset_util.excel_processor import ExcelProcessor
+from dbgpt_hub.data_process.table_meta_data_process import get_all_table_meta_data
 
 # 单例模式
 class Singleton(object):
@@ -58,7 +59,7 @@ def prepare_table_data(input: Optional[str]) -> str:
 
 # 准备用于推理sql的数据
 def prepare_sql_data(input: Optional[str], pred_tables:Optional[List]) -> str:
-    all_table_dict = generate_sql_table_meta_data()
+    all_table_dict = get_all_table_meta_data()
     instruction_sql = (DB_ID + " contains tables such as " + ", ".join(pred_tables) + ". ")
     for name in pred_tables:
         columns = all_table_dict[name]["columns"]
@@ -68,32 +69,6 @@ def prepare_sql_data(input: Optional[str], pred_tables:Optional[List]) -> str:
         primary_key = all_table_dict[name]["primary_key"]
         instruction_sql += (primary_key + " is the primary key."+ "\n")
     return SQL_PROMPT.format(instruction_sql,input)
-
-# 获取表的schema结构，用于构造sql的prompt
-def generate_sql_table_meta_data() -> Optional[Dict]:
-    print("Load tables schema...")
-    all_tables = excel_processor.read_excel(os.path.join(DATA_PATH, DB_ID, "all_table.xlsx"))
-    tables = [str(item[1]) for item in all_tables]
-    all_table_dict = {}
-    for item in tables:  # 一个item是一个表
-        table = item
-        schema_file = os.path.join(DATA_PATH, DB_ID, SCHEMA, table + ".xlsx")
-        meta_data = excel_processor.read_excel(schema_file)
-        columns = []
-        column_comments = []
-        primary_key = None
-        for md in meta_data:
-            columns.append(md[1])
-            column_comments.append(md[3])
-            if md[4]==1:
-                primary_key=md[1]
-        new_dict = {
-             "columns":columns,
-             "column_comments":column_comments,
-             "primary_key":primary_key
-        }
-        all_table_dict[table] = new_dict
-    return all_table_dict
 
 def start_predict_one_sql(input):
     singleton= Singleton.instance()
