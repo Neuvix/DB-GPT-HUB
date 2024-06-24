@@ -46,16 +46,16 @@ EXT2TYPE = {"csv": "csv", "json": "json", "jsonl": "json", "txt": "text"}
 # text2sql dataset information for processing sql data
 # TODO: BIRD \ WiKiSQL \ ...
 SQL_DATA_INFO = [
-    {
-        "data_source": "tp_mis",  # 这是一个库
-        "train_file": ["question_sql.json"], # 用于生成prompt训练集的初始数据集，可以加多个训练数据集, "train_others.json"
-        "dev_file": ["dev.json"],
-        "train_tables_file": "tables.json",
-        "dev_tables_file": "tables.json",
-        "db_id_name": "db_id",
-        "output_name": "query",
-        "is_multiple_turn": False,
-    }
+    # {
+    #     "data_source": "tp_mis",  # 这是一个库
+    #     "train_file": ["question_sql.json"], # 用于生成prompt训练集的初始数据集，可以加多个训练数据集, "train_others.json"
+    #     "dev_file": ["dev.json"],
+    #     "train_tables_file": "tables.json",
+    #     "dev_tables_file": "tables.json",
+    #     "db_id_name": "db_id",
+    #     "output_name": "query",
+    #     "is_multiple_turn": False,
+    # }
     # {
     #     "data_source": "bird",
     #     "train_file": ["train/train.json"],

@@ -7,7 +7,7 @@ ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fi
 sys.path.append(ROOT_PATH)
 
 from dbgpt_hub.llm_base.chat_model import ChatModel
-from dbgpt_hub.dataset_util.excel_processor import ExcelProcessor
+from dbgpt_hub.data_process.excel_processor import ExcelProcessor
 from dbgpt_hub.data_process.table_meta_data_process import get_all_table_meta_data
 
 # 单例模式

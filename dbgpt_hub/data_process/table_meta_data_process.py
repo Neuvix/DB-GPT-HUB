@@ -7,7 +7,7 @@ from typing import Optional, Dict, List
 ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(ROOT_PATH)
 
-from dbgpt_hub.dataset_util.excel_processor import ExcelProcessor
+from dbgpt_hub.data_process.excel_processor import ExcelProcessor
 excel_processor = ExcelProcessor()
 
 DATA_PATH = "dbgpt_hub/data"
