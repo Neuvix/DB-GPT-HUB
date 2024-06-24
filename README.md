@@ -112,3 +112,53 @@ output_dir="dbgpt_hub/output/adapter/llama-3-sqlcoder-lora"
 
 ![1719196753248](1719196753248.png)
 
+
+
+## 3 模型推理（预测）
+
+#### 3.1 步骤
+
+1、代码在DB-GPT-HUB目录下执行（需要根据相对路径获取all_table.xlsx、ChatModel对象等）；
+
+2、提供可调用方法：`dbgpt_hub.predict.predict_one_sql.start_predict_one_sql()`。
+
+举例：
+
+```python
+ print(start_predict_one_sql("有多少司机"))
+ print(start_predict_one_sql("查询aaa计划开工时间"))
+```
+
+#### 3.2 输出结果
+
+```
+SELECT COUNT(*) FROM tp_mis.change_driver_basic_info ;
+SELECT plan_start_work_date_time FROM change_shipping_basic_work_data WHERE vssc_name = "aaa" ORDER BY update_date_time DESC LIMIT 1  
+```
+
+日志：
+
+The inferred table is  ['change_driver_basic_info']
+Begin inferencing sql...
+SELECT COUNT(*) FROM tp_mis.change_driver_basic_info ;
+Begin inferencing tables...
+The inferred table is  ['change_shipping_basic_work_data']
+Begin inferencing sql...
+SELECT plan_start_work_date_time FROM change_shipping_basic_work_data WHERE vssc_name = "aaa" ORDER BY update_date_time DESC LIMIT 1  
+
+#### 3.3 推理流程
+
+两阶段推理：
+
+1、输入查询：“有多少司机”，使用查询构造table-prompt
+
+2、模型推理：查询“有多少司机”需要哪几张表，假如模型推理得a、b表
+
+3、使用“有多少司机”+a、b表结构构造sql-prompt
+
+4、模型推理：得到sql
+
+图解：
+
+![1719198359742](1719198359742.png)
+
