@@ -1,22 +1,33 @@
 # Neuvix-NL2SQL项目
 
-本项目基于DB-GBT-HuB框架，将重构数据预处理、模型微调两部分功能。
+本项目基于DB-GBT-HuB框架，将重构<u>数据预处理、模型微调、模型推理（预测）</u>三部分功能。
 
 #### 目前已重构文件夹：
 
 | 文件夹名称   | 路径                   | 说明                                                         |
 | ------------ | ---------------------- | ------------------------------------------------------------ |
-| config       | dbgpt_hub\configs      | 保存配置参数的路径，例如data_source数据来源                  |
-| data_process | dbgpt_hub\data_process | 数据预处理，包括将schema转化为tables.json, 将sql、查询对转化为finetuing_train.json微调数据 |
-| dataset_util | dbgpt_hub\dataset_util | 数据预处理的工具包，负责解析excel文件表，或者连接mysql db（目前不适用）。里面有很重要的db_config.yaml配置文件，指定数据库和相应的表。 |
+| config       | dbgpt_hub/configs      | 保存配置参数的路径，例如data_source数据来源                  |
+| data_process | dbgpt_hub/data_process | 数据预处理：1）解析数据库表结构；2）将sql-查询文本对转为prompt |
+| dataset_util | dbgpt_hub/dataset_util | 连接数据库，无用，已删                                       |
+| train        | dbgpt_hub/train        | 训练模型                                                     |
+| predict      | dbgpt_hub/predict      | 根据查询推理sql，目前只使用dbgpt_hub/predict/predict_one_sql.py，预测单条sql |
+| data         | dbgpt_hub/data         | 训练数据                                                     |
+| llm_base     | dbgpt_hub/llm_base     | 加载模型                                                     |
+| scripts      | dbgpt_hub/scripts      | 运行脚本                                                     |
+
+
 
 #### 模型底座
 
-llama3——支持中文
+hugging-face/models--defog--llama-3-sqlcoder-8b（支持中文）
+
+所在路径：/root/Neuvix/hugging-face/models--defog--llama-3-sqlcoder-8b
 
 
 
-## 0 环境准备
+## 0 环境准备、数据准备
+
+0.1 环境准备
 
 ```
 git clone https://github.com/Neuvix/DB-GPT-HUB.git
@@ -24,103 +35,38 @@ cd DB-GPT-HUB
 conda create -n dbgpt_hub python=3.10 
 conda activate dbgpt_hub
 pip install poetry
-poetry install
+poetry install # 一定要执行这步
 ```
+
+0.2 数据准备（详情见Data_Preparation.md）
+
+| 路径                                    | 结构      | 内容                                                         |
+| --------------------------------------- | --------- | ------------------------------------------------------------ |
+| dbgpt_hub/data/tp_mis/schema            | 文件夹    | 每个表的schema文件（英文列名、中文列名、主键），excel文件，格式见每个文件内容 |
+| dbgpt_hub/data/tp_mis/all_table.xlsx    | excel文件 | 数据库所有表的中英文表名                                     |
+| dbgpt_hub/data/tp_mis/question_sql.xlsx | excel文件 | sql-查询文本对，格式见文件内容                               |
 
 
 
 ## 1 数据预处理
 
-整体流程图：
+#### 1.1 操作步骤
 
-![1718711592012](1718711592012.png)
+执行：
 
-只需要配置好以下文件，然后执行:
+`poetry run sh dbgpt_hub/scripts/gen_train_eval_data.sh`
 
-``poetry run sh dbgpt_hub/scripts/gen_train_eval_data.sh``即可。
+得到：
 
-（此步骤前一定要先执行`poetry install`)
+`dbgpt_hub/data/prompt_train.json`文件（用于训练）
 
-| 路径                                  | 结构                                |
-| ------------------------------------- | ----------------------------------- |
-| dbgpt_hub\data\tp_mis\schema          | 目录，其下存放表的schema描述excel表 |
-| dbgpt_hub\data\tp_mis\query_sql.xlsx  | excel文件，存放sql、查询文本对      |
-| dbgpt_hub\dataset_util\db_config.yaml | 按下方1.1节说明进行配置             |
-| dbgpt_hub\configs\config.py           | 按下方1.3节说明配置SQL_DATA_INFO    |
+#### 1.2 整体流程图：
 
+![1719196001712](1719196001712.png)
 
+#### 1.3 prompt_train.json文件
 
-#### 1.1 将schema转成tables.json
-
-tables.json是存储表元数据的文件，用于构造prompt
-
-- schema路径：dbgpt_hub\data\tp_mis\schema：一个表对应一个excel文件。文件格式严格按照现有文件的格式。
-
-- tables.json路径：dbgpt_hub\data\tp_mis\tables.json
-
-- tables.json生成方法：
-
-  1）配置好dbgpt_hub\dataset_util\**db_config.yaml文件**的database、table-configs。详情看文件中注释。
-
-  ```yaml
-  database:
-    db: tp_mis  # 数据库名
-    db_schema: schema  # schema所在目录名
-    question_sql_pairs: ["question_sql.xlsx", "question_sql.json"] # 输入、输出的查询、sql文本对文件名称
-  
-  table-configs:
-    change_ship_archives_basic_info: # 写主表，没主表则随机
-      tables: ["change_ship_archives_basic_info"]  # 所有表放在一个列表里
-      foreign_keys:
-  ```
-
-  2）将schema的excel文件放入上述schema路径。
-
-  3）运行dbgpt_hub\data_process\table_meta_data_process.py脚本。
-
-- tables.json格式：
-
-  - ```json
-    [
-     {
-      "column_comments": [[字段注释]],
-      "column_names_original":[[字段名称]],
-      "column_types": [字段类型],
-      "db_id": "数据库名称",
-      "foreign_keys": [],
-      "primary_keys": [所有主键],
-      "table_names": [],
-      "table_names_original": [所有表]
-     }
-    ]
-    ```
-
-#### 1.2 准备question_sql.json
-
-这是用于构造prompt进行训练的，查询和sql数据对，最终格式如下：
-
-```json
-{
-        "question": "查询所有等待进港船的船名",
-        "query": "SELECT vssc_name FROM change_shipping_basic_work_data WHERE ship_state=\"预进\"",
-        "table": "change_shipping_basic_work_data",
-        "db_id": "tp_mis"
-    }
-```
-
-为了生成这个文件，我添加了脚本dbgpt_hub\data_process\question_sql_data_process.py，运行步骤如下：
-
-- 准备好预先收集的NL和SQL数据，放到以下路径：dbgpt_hub\data\tp_mis\query_sql.xlsx
-
-- 配置好db_config.yaml的database
-
-- 运行dbgpt_hub\data_process\question_sql_data_process.py脚本
-
-- 得到dbgpt_hub\data\tp_mis\query_sql.json
-
-#### 1.3 将tables.json和query_sql.json转换为prompt_train.json文件
-
-prompt文件是：dbgpt_hub\data\tp_mis\prompt_train.json
+prompt文件是：dbgpt_hub\data\prompt_train.json
 
 这个文件就是微调工程的输入数据（即给模型的提示词），格式如下：
 
@@ -139,32 +85,30 @@ prompt文件是：dbgpt_hub\data\tp_mis\prompt_train.json
 
 会包含数据库所有表的字段信息、输入的查询NL和sql。
 
-- prompt_train.json生成步骤：
-
-  1. 确保以下几个文件正确：dbgpt_hub\configs\config.py（其中的SQL_DATA_INFO配置），data数据库目录下query_sql.json存在，dbgpt_hub\data\tp_mis\tables.json存在。
-
-     ```python
-     SQL_DATA_INFO = [
-         {
-             "data_source": "tp_mis",  # 这是一个库
-             "train_file": ["question_sql.json"], # 用于生成prompt训练集的初始数据集，可以加多个训练数据集, "train_others.json"
-             "dev_file": ["dev.json"],
-             "train_tables_file": "tables.json",
-             "dev_tables_file": "tables.json",
-             "db_id_name": "db_id",
-             "output_name": "query",
-             "is_multiple_turn": False,
-         }
-     ]
-     ```
-
-     
-
-  2. 运行dbgpt_hub\data_process\sql_data_process.py脚本
-
-  3. 生成文件dbgpt_hub\data\tp_mis\prompt_train.json。
 
 
+## 2 模型微调（训练）
 
-## 2 模型微调
+#### 2.1 步骤
+
+配置（默认即可）：
+
+dbgpt_hub/scripts/train_sft.sh文件：
+
+```
+model_name_or_path="/root/Neuvix/hugging-face/models--defog--llama-3-sqlcoder-8b"
+output_dir="dbgpt_hub/output/adapter/llama-3-sqlcoder-lora"
+```
+
+执行：
+
+`poetry run sh dbgpt_hub/scripts/train_sft.sh`
+
+得到：
+
+`DB-GPT-HUB/dbgpt_hub/output/adapter/llama-3-sqlcoder-lora`
+
+#### 2.1 微调流程
+
+![1719196753248](1719196753248.png)
 
