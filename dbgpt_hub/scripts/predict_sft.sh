@@ -5,13 +5,13 @@ pred_log="dbgpt_hub/output/logs/pred_test_${current_date}.log"
 start_time=$(date +%s)
 echo " Pred Start time: $(date -d @$start_time +'%Y-%m-%d %H:%M:%S')" >>${pred_log}
 
-CUDA_VISIBLE_DEVICES=0,1  python dbgpt_hub/predict/predict.py \
-    --model_name_or_path /root/Neuvix/hugging-face/models--defog--llama-3-sqlcoder-8b \
-    --template llama2 \
-    --finetuning_type lora \
-    --predicted_input_filename dbgpt_hub/data/prompt_dev.json \
-    --checkpoint_dir dbgpt_hub/output/adapter/llama-3-sqlcoder-lora \
-    --predicted_out_filename dbgpt_hub/output/pred/pred_tp_mis.sql >> ${pred_log}
+CUDA_VISIBLE_DEVICES=0,1  python dbgpt_hub/predict/predict.py
+    # --model_name_or_path /root/Neuvix/hugging-face/models--defog--llama-3-sqlcoder-8b \
+    # --template llama2 \
+    # --finetuning_type lora \
+    # --predicted_input_filename dbgpt_hub/data/prompt_train.json \
+    # --checkpoint_dir dbgpt_hub/output/adapter/llama-3-sqlcoder-lora \
+    # --predicted_out_filename dbgpt_hub/output/pred/pred_tp_mis.sql >> ${pred_log}
 
 echo "############pred end###############" >>${pred_log}
 echo "pred End time: $(date)" >>${pred_log}
