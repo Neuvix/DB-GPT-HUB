@@ -112,6 +112,12 @@ output_dir="dbgpt_hub/output/adapter/llama-3-sqlcoder-lora"
 
 ![1719196753248](1719196753248.png)
 
+#### 2.2 微调结果
+
+> 基础知识：什么是Checkpoint？见：https://blog.csdn.net/Flemington7/article/details/139026499?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-139026499-blog-138219996.235%5Ev43%5Epc_blog_bottom_relevance_base5&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EYuanLiJiHua%7EPosition-2-139026499-blog-138219996.235%5Ev43%5Epc_blog_bottom_relevance_base5&utm_relevant_index=5
+
+保存微调后的checkpoint到DB-GPT-HUB/dbgpt_hub/output/adapter/llama-3-sqlcoder-lora目录中。
+
 
 
 ## 3 模型推理（预测）
