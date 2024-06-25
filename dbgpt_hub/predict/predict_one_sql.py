@@ -1,39 +1,21 @@
 # Neuvix NL2SQL推理文件
 import os
 import sys
-from typing import List, Dict, Optional
+from typing import List, Optional
 
 ROOT_PATH = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(ROOT_PATH)
 
-from dbgpt_hub.llm_base.chat_model import ChatModel
 from dbgpt_hub.data_process.excel_processor import ExcelProcessor
 from dbgpt_hub.data_process.table_meta_data_process import get_all_table_meta_data
-
-# 单例模式
-class Singleton(object):
-
-    def __init__(self):
-        args = {
-            "model_name_or_path": "/root/Neuvix/hugging-face/models--defog--llama-3-sqlcoder-8b",
-            "template": "llama2",
-            "finetuning_type": "lora",
-            "checkpoint_dir": "/root/Neuvix/DB-GPT-HUB/dbgpt_hub/output/adapter/llama-3-sqlcoder-lora",
-        }
-        print("Load fune-turning model...")
-        # 加载模型
-        self.model = ChatModel(args)
-
-    @classmethod
-    def instance(cls, *args, **kwargs):
-        if not hasattr(Singleton, "_instance"):
-            Singleton._instance = Singleton(*args, **kwargs)
-        return Singleton._instance
+from dbgpt_hub.predict.singleton_model import Singleton
 
 DATA_PATH = "dbgpt_hub/data"
 DB_ID = "tp_mis"
 SCHEMA = "schema"
 excel_processor = ExcelProcessor()
+
+
 
 
 # prompt模板
