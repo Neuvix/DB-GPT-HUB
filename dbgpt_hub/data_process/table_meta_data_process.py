@@ -15,7 +15,7 @@ DB_ID = "tp_mis"
 SCHEMA = "schema"
 
 def get_all_table_name() -> Optional[Dict]:
-        all_tables = excel_processor.read_excel(os.path.join(DATA_PATH, DB_ID, "all_table.xlsx"))
+        all_tables = excel_processor.read_excel(os.path.join(ROOT_PATH, DATA_PATH, DB_ID, "all_table.xlsx"))
         tables = [str(item[1]) for item in all_tables]
         tables_description = [str(item[2]) for item in all_tables]
         all_table_dict = {"tables":tables,
@@ -27,7 +27,7 @@ def get_all_table_meta_data() -> Optional[Dict]:
         all_table_dict = {}
         for item in tables:  # 一个item是一个表
             table = item
-            schema_file = os.path.join(DATA_PATH, DB_ID, SCHEMA, table + ".xlsx")
+            schema_file = os.path.join(ROOT_PATH, DATA_PATH, DB_ID, SCHEMA, table + ".xlsx")
             meta_data = excel_processor.read_excel(schema_file)
             columns = []
             column_comments = []

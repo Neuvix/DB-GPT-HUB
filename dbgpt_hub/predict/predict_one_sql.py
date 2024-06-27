@@ -16,8 +16,6 @@ SCHEMA = "schema"
 excel_processor = ExcelProcessor()
 
 
-
-
 # prompt模板
 # 这是推理用哪些表
 TABLE_PROMPT = '''I want you to act as a SQL terminal in front of an example database, \
@@ -30,10 +28,15 @@ SQL_PROMPT = '''I want you to act as a SQL terminal in front of an example datab
          Write a response that appropriately completes the request.\n"
         "##Instruction:\n{}\n###Input:\n{}\n\n###Response:'''
 
+HIS_SQL_PROMPT = '''I want you to act as a SQL terminal in front of an example database, \
+         you need only to return the sql command to me.Below is an instruction that describes a task, \
+         Write a response that appropriately completes the request.At the same time, you can refer to the historical context in the <history> tab\n"
+        "##Instruction:\n{}\n###Input:\n{}\n\n###Response:'''
+
 # 准备用于推理table的输入数据
 def prepare_table_data(input: Optional[str]) -> str:
     db_id = "tp_mis"
-    all_tables = ExcelProcessor().read_excel(os.path.join(DATA_PATH, DB_ID, "all_table.xlsx"))
+    all_tables = ExcelProcessor().read_excel(os.path.join(ROOT_PATH, DATA_PATH, DB_ID, "all_table.xlsx"))
     tables = ', '.join(str(item[1]) for item in all_tables)
     tables_description = ', '.join(str(item[2]) for item in all_tables)
     instruction = '''I want you to act as a SQL terminal in front of an example database, you need only to return the table name to me.Below is an instruction that describes a task, Write a response that appropriately completes the request. {} contains tables such as {}. The descriptions of these tables are {}'''.format(db_id, tables,tables_description)
@@ -50,7 +53,7 @@ def prepare_sql_data(input: Optional[str], pred_tables:Optional[List]) -> str:
         instruction_sql += "The comments of columns are " + ", ".join(comments) + ". "
         primary_key = all_table_dict[name]["primary_key"]
         instruction_sql += (primary_key + " is the primary key."+ "\n")
-    return SQL_PROMPT.format(instruction_sql,input)
+    return HIS_SQL_PROMPT.format(instruction_sql,input)
 
 def start_predict_one_sql(input):
     singleton= Singleton.instance()
@@ -64,9 +67,33 @@ def start_predict_one_sql(input):
     # 推理sql
     print('Begin inferencing sql...')
     query = prepare_sql_data(input,pred_tables)
-    response_sql, _ = model.chat(query=query)
+    response_sql, _ = model.chat(query=query, history=[])
     return response_sql
 
+def start_predict_one_sql_with_history(input, history_sql:Optional[List] = None):
+    singleton= Singleton.instance()
+    model = singleton.model
+    # 获得tables列表
+    print('Begin inferencing tables...')
+    query = prepare_table_data(input)
+    response_table, _ = model.chat(query=query)
+    pred_tables = response_table.split(",")
+    print('The inferred table is ',pred_tables)
+    # 构造history
+    history_prompt = "<history>Your previous SQL statement was incorrect. Please return the SQL command again<history>"
+    history = []
+    history.append((input, history_sql + history_prompt))
+    # 推理sql
+    print('Begin inferencing sql...')
+    query = prepare_sql_data(input,pred_tables)
+    response_sql, _ = model.chat(query=query, history=history)
+    return response_sql
+
+
 if __name__ == "__main__":
-    print(start_predict_one_sql("有多少司机"))
-    print(start_predict_one_sql("查询aaa计划开工时间"))
+    history_sql = start_predict_one_sql("查询上个月作业吞吐量")
+    print("第一次预测：")
+    print(history_sql)
+    second_sql= start_predict_one_sql_with_history("查询上个月作业吞吐量",history_sql)
+    print("第二次预测：")
+    print(second_sql)
